@@ -14,7 +14,7 @@ const { sequelize } = require('./models');
 
 const app = express();
 
-app.set('port', process.env.PORT || 8040);
+app.set('port', process.env.PORT);
 
 sequelize.sync({ force: false })
     .then(() => console.log('데이터 베이스 연결 성공'))
